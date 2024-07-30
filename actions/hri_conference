@@ -1,0 +1,12 @@
+IMAGE
+<*,*,*,*>:  img/B2.jpeg
+----
+TEXT
+<*,*,it,*>: La conferenza su HRI è nell'aula B2. Segui il percorso verde indicato sullo schermo per raggiungere l'aula.
+<*,*,*,*>: HRI conference is in room B2. Follow the green path shown on the screen to reach the classroom.
+----
+TTS
+<*,*,it,*>: La conferenza su HRI è nell'aula B2. Segui il percorso verde indicato sullo schermo per raggiungere l'aula.
+<*,*,*,*>: HRI conference is in room B2. Follow the green path shown on the screen to reach the classroom.
+----
+

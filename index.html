@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  
+  <script src="qaws.js"></script>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f4f4f4;
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #status {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 1.2em;
+      color: red;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-weight: 300;
+      font-size: 2.5em;
+      margin: 20px 0;
+    }
+
+    input[type=button] {
+      background-color: #A01010;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      padding: 14px 24px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1em;
+      margin: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type=button]:hover {
+      background-color: #D02020;
+    }
+
+    #buttons {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- status -->
+  <div id='status'>NOT CONNECTED</div>
+
+  <!-- image -->
+  <div> 
+    <img id='image_default' src="img/welcome.jpg" alt="No image"/>
+  </div>
+
+  <!-- text -->
+  <h1 id='text_default'>Welcome</h1>
+
+  <!-- buttons -->
+  <div id='buttons'>
+    <!-- input type="button" id="hello" value="Hello" onclick="hello()" -->
+  </div>
+
+  <!-- ****** SCRIPTS ****** -->
+  <script>
+    var ip = window.location.hostname;
+    if (ip == '') ip = '127.0.0.1';
+    var port = 9100;
+
+    console.log("Trying connection...");
+    wsrobot_init(ip, port);
+
+    function hello() {
+      console.log("running interaction...");
+      codews.send("im.robot.say('hello')\n");
+    }
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,20 @@
+IMAGE
+<*,*,*,*>:  img/welcome.jpg
+----
+TEXT
+<*,*,it,*>: Sei soddisfatto dell'esperienza al DIAG?
+<*,*,*,*>:  Are you Satisfied by Diag lifestyle?
+----
+TTS
+<*,*,it,*>: Sei soddisfatto dell'esperienza al DIAG?
+<*,*,*,*>:  Are you Satisfied by Diag lifestyle?
+----
+BUTTONS
+survey_2
+<*,*,it,*>: YES
+<*,*,*,*>:  YES
+survey_2
+<*,*,it,*>: NO
+<*,*,*,*>:  NO
+----
+

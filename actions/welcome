@@ -1,0 +1,12 @@
+IMAGE
+<*,*,*,*>:  img/welcome.jpg
+----
+TEXT
+<*,*,it,*>: Ciao, io sono Pepper e sono qui per aiutarti. Chiedimi qualsiasi cosa.
+<*,*,*,*>: Hello, I'm Pepper and I am here to help you. Ask me anything.
+----
+TTS
+<*,*,it,*>: Ciao, io sono Pepper e sono qui per aiutarti. Chiedimi qualsiasi cosa.
+<*,*,*,*>: Hello, I'm Pepper and I am here to help you. Ask me anything.
+----
+

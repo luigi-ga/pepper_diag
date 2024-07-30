@@ -1,0 +1,29 @@
+IMAGE
+<*,*,*,*>:  img/welcome.jpg
+----
+TEXT
+<*,*,it,*>: Che voto daresti alla tua esperienza?
+<*,*,*,*>:  How would you rate your experience?
+----
+TTS
+<*,*,it,*>: Che voto daresti alla tua esperienza?
+<*,*,*,*>:  How would you rate your experience?
+----
+BUTTONS
+1
+<*,*,it,*>: 1
+<*,*,*,*>:  1
+2
+<*,*,it,*>: 2
+<*,*,*,*>:  2
+3
+<*,*,it,*>: 3
+<*,*,*,*>:  3
+4
+<*,*,it,*>: 4
+<*,*,*,*>:  4
+5
+<*,*,it,*>: 5
+<*,*,*,*>:  5
+----
+

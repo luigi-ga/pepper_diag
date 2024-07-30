@@ -1,0 +1,32 @@
+IMAGE
+<*,*,*,*>:  img/welcome.jpg
+----
+TEXT
+<*,*,it,*>: Quale evento stai cercando?
+<*,*,*,*>:  Which event are you looking for? 
+----
+TTS
+<*,*,it,*>: Quale evento stai cercando?
+<*,*,*,*>:  Which event are you looking for? 
+----
+BUTTONS
+seminars_rob
+<*,*,it,*>: Seminario Robotica
+<*,*,*,*>:  Seminars Robotics
+startup
+<*,*,it,*>: Startup
+<*,*,*,*>:  Startup
+carrer_days
+<*,*,it,*>: Career Days
+<*,*,*,*>:  Career Days
+robocup
+<*,*,it,*>: Conferenza Robocup
+<*,*,*,*>:  RoboCup Conference
+seminars_ai
+<*,*,it,*>: Seminari AI
+<*,*,*,*>:  Seminars AI
+hri_conference
+<*,*,it,*>: HRI Conference
+<*,*,*,*>:  HRI Conference
+----
+

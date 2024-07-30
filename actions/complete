@@ -1,0 +1,12 @@
+IMAGE
+<*,*,*,*>:  img/complete.jpeg
+----
+TEXT
+<*,*,it,*>: Questa è la mappa del piano terra del DIAG.
+<*,*,*,*>: This is a map of the ground floor of DIAG.
+----
+TTS
+<*,*,it,*>: Questa è la mappa del piano terra del DIAG.
+<*,*,*,*>: This is a map of the ground floor of DIAG.
+----
+

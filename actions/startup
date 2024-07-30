@@ -1,0 +1,12 @@
+IMAGE
+<*,*,*,*>:  img/A4.jpeg
+----
+TEXT
+<*,*,it,*>: L'evento sulle startup è nell'aula A4. Segui il percorso verde indicato sullo schermo per raggiungere l'aula.
+<*,*,*,*>: Startup event is in room A4. Follow the green path shown on the screen to reach the classroom.
+----
+TTS
+<*,*,it,*>: L'evento sulle startup è nell'aula A4. Segui il percorso verde indicato sullo schermo per raggiungere l'aula.
+<*,*,*,*>: Startup event is in room A4. Follow the green path shown on the screen to reach the classroom.
+----
+

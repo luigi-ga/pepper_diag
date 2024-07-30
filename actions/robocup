@@ -1,0 +1,12 @@
+IMAGE
+<*,*,*,*>:  img/A6.jpeg
+----
+TEXT
+<*,*,it,*>: L'evento RoboCup è nell'aula A6. Segui il percorso verde indicato sullo schermo per raggiungere l'aula.
+<*,*,*,*>: CRobocup event is in room A6. Follow the green path shown on the screen to reach the classroom.
+----
+TTS
+<*,*,it,*>: L'evento RoboCup è nell'aula A6. Segui il percorso verde indicato sullo schermo per raggiungere l'aula.
+<*,*,*,*>: CRobocup event is in room A6. Follow the green path shown on the screen to reach the classroom.
+----
+

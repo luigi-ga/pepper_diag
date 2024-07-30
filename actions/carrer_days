@@ -1,0 +1,12 @@
+IMAGE
+<*,*,*,*>:  img/A5.jpeg
+----
+TEXT
+<*,*,it,*>: Il meeting con le aziende è nell'aula A5. Segui il percorso verde indicato sullo schermo per raggiungere l'aula.
+<*,*,*,*>: Carrer days is in room A5. Follow the green path shown on the screen to reach the classroom.
+----
+TTS
+<*,*,it,*>: Il meeting con le aziende è nell'aula A5. Segui il percorso verde indicato sullo schermo per raggiungere l'aula.
+<*,*,*,*>: Carrer days is in room A5. Follow the green path shown on the screen to reach the classroom.
+----
+

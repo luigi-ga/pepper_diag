@@ -1,0 +1,12 @@
+IMAGE
+<*,*,*,*>:  img/B101.jpeg
+----
+TEXT
+<*,*,it,*>: Segui il percorso verde indicato sullo schermo per raggiungere l'aula B101.
+<*,*,*,*>: Follow the green path shown on the screen to reach classroom B101.
+----
+TTS
+<*,*,it,*>: Segui il percorso verde indicato sullo schermo per raggiungere l'aula B101.
+<*,*,*,*>: Follow the green path shown on the screen to reach classroom B101.
+----
+
