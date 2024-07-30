@@ -86,6 +86,9 @@ class Pepper:
         self.ip = ip
         self.port = port
 
+        # Create password
+        self.password = "alberorosso"
+
         # Define the proxies
         self.tts_proxy = ALProxy("ALTextToSpeech", ip, port)
         self.posture_proxy = ALProxy("ALRobotPosture", ip, port)
@@ -116,6 +119,14 @@ class Pepper:
             # Keyboard input
             user_input = raw_input("You: ").strip().lower()
 
+            if response=="Hi there!" or response=="Hello! Welcome to the DIAG!" or response=="Good morning! I hope you have a great day here at the DIAG. Any questions?" or response=="Good afternoon! Looking for any specific information?" or response=="Good evening! How can I make your visit more pleasant?":
+                self.wave_hand_hello()	
+                self.posture_proxy.goToPosture("StandInit", 1.0)
+                
+            if response=="You're welcome! I am here if you need more help":
+                self.greeting()	
+                self.posture_proxy.goToPosture("StandInit", 1.0)
+
             # Check if the user wants to access the private section
             if user_input.lower() == 'personal access':
                 self.password_check()
@@ -141,15 +152,15 @@ class Pepper:
                 self.posture_proxy.goToPosture("StandInit", 1.0)
                 break
 
-            # C
+            # Find the response in the corpus
             response = self.find_answer(user_input, text_corpus)
 
             # If the response is not found in the corpus, try to respond to the query
             if response=="Sorry, I can't find an answer to your question.":
                 response = self.respond_to_query(user_input)
-            self.tts_proxy.say(response)
+                self.tts_proxy.say(response)
             
-            # Actions based on the response
+            # BUILDING DIRECTIONS
 
             if response=="I can show you the map of the building from here.":
                 self.posture_proxy.goToPosture("StandInit", 1.0)
@@ -212,14 +223,6 @@ class Pepper:
 
             if response=="The secretary office is here at your left, you can find everything you need" or response=="If you need any further assistance, please approach any of our staff members or come to the information desk" or response=="The security desk is at the main entrance on the left" or response=="The labs are located downstairs on the left":
                 self.arm_head_direction(dir='R')	
-                self.posture_proxy.goToPosture("StandInit", 1.0)
-                
-            if response=="Hi there!" or response=="Hello! Welcome to the DIAG!" or response=="Good morning! I hope you have a great day here at the DIAG. Any questions?" or response=="Good afternoon! Looking for any specific information?" or response=="Good evening! How can I make your visit more pleasant?":
-                self.wave_hand_hello()	
-                self.posture_proxy.goToPosture("StandInit", 1.0)
-                
-            if response=="You're welcome! I am here if you need more help":
-                self.greeting()	
                 self.posture_proxy.goToPosture("StandInit", 1.0)
                 
             if response=="All the professors offices are located in the second floor":
@@ -366,11 +369,10 @@ class Pepper:
 
     def display_survey_2():
         vote = im.ask(actionname='survey_2',timeout=40,audio=True)
-        try:
-            with open('votes.txt', "a") as file:
-                file.write(str(vote) + "\n")
-        except Exception as e:
-            print("An error occurred:", e)
+        current_directory = os.getcwd()  # Get the current working directory
+        with open('votes.txt', "a") as file:
+            file.write(str(vote) + "\n")
+        print("File saved at:", os.path.join(current_directory, 'votes.txt'))
 
 
 
@@ -391,7 +393,7 @@ class Pepper:
             else:
                 self.tts_proxy.say("No grades to calculate.")
                 print("Bot: No grades to calculate.")
-        except FileNotFoundError:
+        except Exception as e:
             self.tts_proxy.say("No grades to calculate.")
             print("Bot: No grades to calculate.")
 
@@ -447,30 +449,23 @@ class Pepper:
     ###########################
 
     def password_check(self):
-
+        # Ask the user to input the password
         self.tts_proxy.say("you are in the private section, input personal password")
         print("Bot: you are in the private section, input personal password")
-
         password = raw_input("input password: ")
 
-        if password == "alberorosso":
-            self.tts_proxy.say("Access allowed.")
-            print("Bot: Access allowed.")
-            time.sleep(2)
-            
-            self.tts_proxy.say("waiting for command...")
-            print("Bot: waiting for command...")
-            comando = raw_input("Waiting for command: ")
-
-            if comando.lower() == "pulisci media":
+        # Check if the password is correct
+        if password == self.password:
+            # Ask the user if he wants to reset the votes
+            self.tts_proxy.say("Access allowed. Do u want to reset the average of the votes? (yes/no)")
+            print("Bot: Access allowed. Do u want to reset the average of the votes? (yes/no)")
+            comando = raw_input("You: ")
+            # Reset the votes
+            if comando.lower() == "yes":
                 self.tts_proxy.say("I reset the average of the votes")
                 print("Bot: I reset the average of the votes")
                 with open("voti.txt", "w") as file:
                     file.write("")
-
-            else:
-                self.tts_proxy.say("command not recognized.")
-                print("Bot: command not recognized.")
         else:
             self.tts_proxy.say("Wrong password. Access denied.")
             print("Bot: Wrong password. Access denied.")
